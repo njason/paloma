@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One-Time Secret</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>One-Time Secret</h1>
+
+        <!-- Form to submit a new secret -->
+        <div id="create-secret">
+            <h2>Store a Secret</h2>
+            <textarea id="secret" placeholder="Enter your secret here..."></textarea>
+            <button id="storeSecretBtn">Store Secret</button>
+        </div>
+
+        <!-- Area to display secret URL -->
+        <div id="secret-result" style="display:none;">
+            <p>Your secret has been stored. You can share this URL:</p>
+            <p><a href="#" id="secretLink" target="_blank"></a></p>
+        </div>
+
+        <!-- Form to retrieve a secret -->
+        <div id="retrieve-secret">
+            <h2>Retrieve a Secret</h2>
+            <input type="text" id="secretKey" placeholder="Enter secret key or URL" />
+            <button id="retrieveSecretBtn">Retrieve Secret</button>
+        </div>
+
+        <!-- Area to display the retrieved secret -->
+        <div id="retrieved-secret" style="display:none;">
+            <h2>Secret:</h2>
+            <p id="secretText"></p>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
