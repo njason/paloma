@@ -91,7 +91,7 @@ func StoreSecretHandler(w http.ResponseWriter, r *http.Request) {
 
 	// Return the unique URL where the secret can be retrieved.
 	secretURL := fmt.Sprintf("%s/secret/%s", r.Host, key)
-	fmt.Fprintf(w, "Secret stored. Access it at: http://%s\n", secretURL)
+	fmt.Fprintf(w, "http://%s\n", secretURL)
 }
 
 // GetSecretHandler handles the retrieval of secrets.
@@ -110,7 +110,7 @@ func GetSecretHandler(w http.ResponseWriter, r *http.Request) {
 	}
 
 	// Return the secret and mark it as retrieved.
-	fmt.Fprintf(w, "Your secret is: %s\n", secret)
+	fmt.Fprintf(w, "%s\n", secret)
 }
 
 func main() {

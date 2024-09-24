@@ -23,8 +23,8 @@ document.addEventListener('DOMContentLoaded', () => {
           // Show the secret URL
           const secretResult = document.getElementById('secret-result');
           const secretLink = document.getElementById('secretLink');
-          secretLink.href = `http://${data.trim()}`;
-          secretLink.textContent = `http://${data.trim()}`;
+          secretLink.textContent = `${data.trim()}`;
+          secretLink.href = `${data.trim()}`;
           secretResult.style.display = 'block';
       })
       .catch(error => console.error('Error storing secret:', error));
